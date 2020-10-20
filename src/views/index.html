@@ -1,0 +1,136 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>My page title</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- as três linhas abaixo são uma correção para que elementos semânticos HTML5 funcionem em versões antigas do Internet Explorer-->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: rgba(0, 128, 0, 0.1);
+            ;
+            color: black;
+        }
+
+        div.a1 {
+            background: rgba(0, 128, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 10;
+            padding: 10;
+        }
+
+        li {
+            display: inline;
+        }
+
+        li a {
+            padding: 1px;
+        }
+
+        img {
+            max-width: 70%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        img.img2 {
+            max-width: 70%;
+            margin-left: 1px;
+        }
+
+        li.a {
+            display: inline;
+            padding: 28px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Esse é o cabeçalho (header) principal que vai ser usado em todas as páginas do nosso website -->
+
+    <div class="a1">
+         <a href="/" title="Indice"><img class="img2" src="house-with-window.png"
+                    style="width:24px;height:24px;"></a>
+            <header>
+                <h1>DAW I - Desenvolvimento de aplicações WEB I </h1>
+              </header>  
+       
+        </header>
+        <!--  <a href="default.asp"><img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;"></a> -->
+        <nav>
+            <ul>
+                <li class="a"><a class="a" href="/" title="Indice">Índice</a></li>
+                <li class="a"><a class="a" href="/eu" title="Eu">Eu</a></li>
+                <li class="a"><a class="a" href="/aluno" title="Aluno">Aluno</a></li>
+                <li class="a"><a class="a" href="/duvida" title="Duvida">Dúvida</a></li>
+            </ul>
+
+
+
+            <!-- Um formulário de pesquisa é uma outra maneira não linear comum de navegar por um site. -->
+
+        </nav>
+
+    </div>
+
+    <!-- Esse é o conteúdo principal da nossa página -->
+    <main>
+
+        <!-- Contém um artigo -->
+        <article>
+            <h2>Aplicações web: o que são e quais suas vantagens?</h2>
+
+            <p>As aplicações web funcionam de forma semelhante aos aplicativos tradicionais, mas com uma diferença
+                básica: são rodados na web. O uso desse tipo de sistema é uma tendência atualmente por conta da
+                necessidade de economia de recursos e por gerarem menos problemas com infraestrutura interna de TI.
+
+                Assim, a preferência por esse tipo de sistema ajuda a otimizar a performance do empreendimento e a
+                resolver outros problemas, dando mais agilidade aos processos. Portanto, entender os seus princípios e
+                pilares é fundamental para colocar a empresa em destaque no mercado e promover o seu crescimento.
+
+                Suprir as demandas da empresa por software pode ser complexo, mas com atenção a esse tipo específico de
+                aplicação o processo será certamente mais simples. Se quiser se aprofundar nesse assunto e saber o que
+                são as aplicações web e quais as suas principais vantagens, leia os tópicos a seguir!.</p>
+
+            <img src="foto1.jpg" alt="Trulli" width="500" height="333" align="middle">
+
+            <p align="center">Fonte: https://tegra.com.br/aplicacoes-web/</p>
+
+
+    </main>
+
+    <!-- Esse é o rodapé principal que vai ser usado em todas as páginas do nosso website -->
+
+    <footer>
+        <p>Luciano Gobo Saraiva Leite</p>
+        <p id="demo"></p>
+    </footer>
+
+    <script>
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d;
+    </script>
+
+</body>
+
+</html>

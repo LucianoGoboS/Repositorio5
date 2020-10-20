@@ -1,0 +1,185 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>My page title</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- as três linhas abaixo são uma correção para que elementos semânticos HTML5 funcionem em versões antigas do Internet Explorer-->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+
+    <style>
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: rgba(0, 128, 0, 0.1);
+            color: black;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 10;
+            padding: 10;
+        }
+
+
+
+        div.a1 {
+            background: rgba(0, 128, 0, 0.1);
+        }
+
+        li a {
+            padding: 1px;
+        }
+
+
+        div.a2 {
+            background-image: url("minerva.png");
+            background-repeat: no-repeat;
+            background-position: 20% 35%;
+            background-size: cover;
+        }
+
+        a.a1b {
+            padding: 16px 16px;
+        }
+
+        li.b {
+            list-style-type: square;
+        }
+
+        img {
+            max-width: 20%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        li.a {
+            display: inline;
+            padding: 28px;
+        }
+
+        img.img2 {
+            max-width: 70%;
+            margin-left: 1px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Esse é o cabeçalho (header) principal que vai ser usado em todas as páginas do nosso website -->
+
+    <div class="a1">
+        <a href="/" title="Indice"><img class="img2" src="house-with-window.png" style="width:24px;height:24px;"></a>
+        <header>
+            <h1> Envie aqui a sua mensagem!</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li class="a"><a class="nav-link" href="/" title="Indice">Índice</a></li>
+                <li class="a"><a class="nav-link" href="/eu" title="Eu">Eu</a></li>
+                <li class="a"><a class="nav-link" href="/aluno" title="Aluno">Aluno</a></li>
+                <li class="a"><a class="nav-link" href="/duvida" title="Duvida">Dúvida</a></li>
+            </ul>
+
+
+
+            <!-- Um formulário de pesquisa é uma outra maneira não linear comum de navegar por um site. -->
+
+        </nav>
+
+    </div>
+
+    <!-- Esse é o conteúdo principal da nossa página -->
+
+    <div class="a2">
+
+        <form action="/confirmacao" id="form1" method="POST">
+            <!--<form  action="/action" id="form1" method="POST"> -->
+            <label for="lname">Descrição:</label><br>
+            <input type="text" id="lassunto" name="Assunto" value=""><br><br>
+            <label for="lname">E-mail:</label><br>
+            <input type="text" id="lname" name="lname" value=""><br><br>
+            <input type="submit" onclick=" return validar()" value="Enviar">
+        </form>
+
+
+    </div>
+    <!-- Esse é o rodapé principal que vai ser usado em todas as páginas do nosso website -->
+
+    <footer>
+        <p>Luciano Gobo Saraiva Leite</p>
+        <p id="demo"></p>
+    </footer>
+
+    <script>
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d;
+    </script>
+    <script>
+        function validar() {
+            var telefone = document.getElementsByName("lname")[0].value;
+            var assunto = document.getElementsByName("Assunto")[0].value;
+            var teste;
+            teste = parseInt(teste);
+            var email = String(telefone);
+            var i, j;
+            i = parseInt(i);
+            j = parseInt(j);
+            if (telefone == "" || assunto == "") {
+                alert("Vc tem que preencher todo o formulario");
+                return false;
+            } else {
+                teste = 0;
+                j = email.length;
+                for (i = 0; i < j; i++) {
+                    if (email.substr(i, 1) == ".") {
+                        teste = teste + 1;
+                    }
+                }
+                if (teste < 1) {
+                    alert("Deve ter pelo menos um ponto no email");
+                    return false;
+                } else {
+                    teste = 0;
+                    j = email.length;
+                    for (i = 0; i < j; i++) {
+                        if (email.substr(i, 1) == "@") {
+                            teste = teste + 1;
+                        }
+                    }
+                    if (teste != 1) {
+                        alert("Deve ter apenas um caractere @");
+                        return false;
+                    } else {
+                        if (email.lastIndexOf(".") == email.length - 1 || email.lastIndexOf("@") == email.length - 1) {
+                            alert("O ponto (.) ou @ nao deve estar no final do email");
+                            return false;
+
+                        } else {
+                            document.getElementById("form1").submit();
+                            return true;
+                        }
+                    }
+                }
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

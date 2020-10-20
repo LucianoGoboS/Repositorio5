@@ -1,0 +1,150 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: Drgba(0, 128, 0, 0.1);
+            color: black;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 10;
+            padding: 10;
+        }
+
+        li.a {
+            display: inline;
+            padding: 28px;
+        }
+
+
+
+        div.a1 {
+            background: rgba(0, 128, 0, 0.1);
+        }
+
+        div.a2 {
+            background-image: url("minerva.png");
+            background-repeat: no-repeat;
+            background-position: 20% 35%;
+            background-size: cover;
+        }
+
+        li.b {
+            list-style-type: square;
+        }
+
+        img {
+            max-width: 20%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        li a.a1 {
+            padding: 1px;
+        }
+
+        a.a12 {
+            padding: 1px;
+        }
+
+        img.img2 {
+            max-width: 70%;
+            margin-left: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="a1">
+        <a href="/" title="Indice"><img class="img2" src="house-with-window.png"></a>
+        <header>
+            <h1> Desenvolvimento de aplicações WEB I - Turma 2020 - 2 Semestre</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li class="a"><a class="a1" href="/" title="Indice">Índice</a></li>
+                <li class="a"><a class="a1" href="/eu" title="Eu">Eu</a></li>
+                <li class="a"><a class="a1" href="/aluno" title="Aluno">Aluno</a></li>
+                <li class="a"><a class="a1" href="/duvida" title="Duvida">Dúvida</a></li>
+            </ul>
+
+
+
+            <!-- Um formulário de pesquisa é uma outra maneira não linear comum de navegar por um site. -->
+
+        </nav>
+
+    </div>
+
+
+    <div id="lista2">
+        <h1>Lista dos alunos</h1>
+    </div>
+
+
+    <div id="lista">
+        <p id="memo"></p>
+    </div>
+
+    <footer>
+        <p>Luciano Gobo Saraiva Leite</p>
+        <p id="demo"></p>
+    </footer>
+
+    <script>
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d;
+    </script>
+
+    <script>
+
+
+        var myObj, x = "", y = "", i;
+        myObj = [{ "nome": "Carlos Alexandre Dias Leal", "email": "carlos.diasleal@gmail.com" }, { "nome": "Carlos Beirigo Fernandes", "email": "carlosbeirigo@hotmail.com" }, { "nome": "Carlos Eduardo Cabral", "email": "edu.carlos2000@hotmail.com" }, { "nome": "Gustavo William de Bessa", "email": "gustavoux@yahoo.com.br" }, { "nome": "Jaccques Jonas de Souza Júnior", "email": "jacquesjr19@gmail.com" }, { "nome": "Lucas Tayar Alvarenga Cunha", "email": "lucastayar12@gmail.com" }, { "nome": "Luciano Gobo Saraiva Leite", "email": "lucianogobo@gmail.com" }, { "nome": "Marco Antonio Guarato Alves", "email": "demonhunter1512@gmail.com" }, { "nome": "Mario Augusto Oliveira Souto", "email": "mario1119@hotmail.com" }, { "nome": "Márcio Alves Junior", "email": "marcioalves.jr97@gmail.com" }, { "nome": "Pedro Henrique Ribeiro Cortez", "email": "pedrocortez877@gmail.com" }, { "nome": "Rafael Silveira Assunção", "email": "rafael.silveira.a12@gmail.com" }, { "nome": "Tainá Costa Caetano Pires", "email": "tainaccpires@gmail.com" }];
+
+        var aplicativo = document.querySelector("#lista");
+        var listaElemento = document.createElement('ul');
+        aplicativo.appendChild(listaElemento);
+        listaElemento.setAttribute('id', 'lista2');
+        var itemLista;
+
+        for (i in myObj) {
+
+            x = myObj[i].nome;
+            if (x == "Luciano Gobo Saraiva Leite") {
+                y += "<li>" + myObj[i].nome.link("/eu") + "   email: " + myObj[i].email + "</li>";
+            } else {
+                y += "<li>" + myObj[i].nome + "   email: " + myObj[i].email + "</li>";
+            }
+        }
+
+        document.getElementById("memo").innerHTML = y;
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

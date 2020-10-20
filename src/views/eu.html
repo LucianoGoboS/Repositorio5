@@ -1,0 +1,167 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>My page title</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- as três linhas abaixo são uma correção para que elementos semânticos HTML5 funcionem em versões antigas do Internet Explorer-->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+
+    <style>
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: rgba(0, 128, 0, 0.1);
+            color: black;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li.a {
+            display: inline;
+            padding: 28px;
+        }
+
+        li a {
+            padding: 1px;
+        }
+
+        li.li1 a {
+            padding: 1px 1px;
+        }
+
+        div.a1 {
+            background: rgba(0, 128, 0, 0.1);
+        }
+
+        div.a2 {
+            background-image: url("minerva.png");
+            background-repeat: no-repeat;
+            background-position: 20% 35%;
+            background-size: cover;
+        }
+
+        li.b {
+            list-style-type: square;
+        }
+
+        img {
+            max-width: 20%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        img.img2 {
+            max-width: 70%;
+            margin-left: 1px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Esse é o cabeçalho (header) principal que vai ser usado em todas as páginas do nosso website -->
+    <div class="a1">
+
+        <a href="/" title="Indice"><img class="img2" src="house-with-window.png"></a>
+
+        <header>
+            <h1>Luciano Gobo Saraiva Leite - Apresentação pessoal</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li class="a"><a class="a" href="/" title="Indice">Índice</a></li>
+                <li class="a"><a class="a" href="/eu" title="Eu">Eu</a></li>
+                <li class="a"><a class="a" href="/aluno" title="Aluno">Aluno</a></li>
+                <li class="a"><a class="a" href="/duvida" title="Duvida">Dúvida</a></li>
+            </ul>
+
+
+
+            <!-- Um formulário de pesquisa é uma outra maneira não linear comum de navegar por um site. -->
+
+        </nav>
+
+    </div>
+
+    <!-- Esse é o conteúdo principal da nossa página -->
+    <main>
+
+        <div class="a2">
+
+            <!-- Contém um artigo -->
+            <article>
+                <h1>Mini-currículo</h1>
+
+                <h2>Formação acadêmica</h2>
+                <ul>
+                    <li class="b">2000 - 2007
+                        Doutorado em Engenharia Civil (Engenharia de Estruturas) (Conceito CAPES 7).
+                        Universidade de São Paulo, USP, Brasil.
+                        Título: DESENVOLVIMENTO DE MODELOS NUMÉRICOS PARA ANÁLISE DE PROBLEMAS DE INTERAÇÃO EM DOMÍNIOS
+                        BIDIMENSIONAIS, Ano de obtenção: 2007.</li>
+                    <li class="b"> 1996 - 1998 Mestrado em Engenharia de Estruturas (Conceito CAPES 4).
+                        Universidade Federal de Minas Gerais, UFMG, Brasil.
+                        Título: Analise de Placas apoiadas em fundacoes elasticas utilizando o Metodo dos Elementos de
+                        Contorno segundo a Teoria de Reissner,Ano de Obtenção: 1998.</li>
+                    <li class="b">1989 - 1995 Graduação em Engenharia Civil.
+                        Universidade Federal de Viçosa, UFV, Brasil.</li>
+                </ul>
+
+                <h2>Atuação profissional</h2>
+
+                <ul>
+                    <li class="b"> 2010 - Atual
+                        Universidade Federal do Triângulo Mineiro - UFTM. Vínculo: Servidor Público, Enquadramento
+                        Funcional: Professor Adjunto, Carga horária: 40, Regime: Dedicação exclusiva.</li>
+                </ul>
+
+                <h2>Hobbies</h2>
+
+                <ul>
+                    <li class="b">Programação e desenho (CAD)</li>
+                    <li class="b">Caminhada e bike</li>
+                    <li class="b">Leitura (de bula de remédio em diante)</li>
+                    <li class="b">Viajar (por enquanto só nas páginas da WEB)</li>
+                </ul>
+
+                <img src="apresentacao.jpg" alt="Trulli" align="middle">
+
+
+
+
+    </main>
+
+    </div>
+    <!-- Esse é o rodapé principal que vai ser usado em todas as páginas do nosso website -->
+
+    <footer>
+        <p>Luciano Gobo Saraiva Leite</p>
+        <p id="demo"></p>
+    </footer>
+
+    <script>
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d;
+    </script>
+
+</body>
+
+</html>
